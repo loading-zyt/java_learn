@@ -1,0 +1,28 @@
+// ==UserScript==
+// @name         tampermonkey learn
+// @namespace    http://loading-zyt.github.io/
+// @version      0.1
+// @description  try to use tampermonkey
+// @author       You
+// @match        *://www.baidu.com/
+// @grant        none
+// ==/UserScript==
+
+(function() {
+    'use strict';
+
+    var inputContent = "monkey \
+cat \
+dog \
+pig";
+    var splitContent = inputContent.split(' ');
+    //alert(splitContent.length);
+    //window.location.assign("https://www.w3school.com.cn")
+
+    //for(let i = 0; i　< splitContent.length; i++) {
+        window.location.assign("https://www.baidu.com/s?wd="+splitContent[2]);
+        //alert(document.querySelector("#\\31  > div > div.c-span18.c-span-last > p:nth-child(2)").innerText);
+        alert("test!!!!");
+    //}
+
+})();
